@@ -1,7 +1,7 @@
 {
   "name": "arcfire",
   "productName": "Arcfire",
-  "version": "0.1.0",
+  "version": "0.1.1-snapshot",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,7 +12,7 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
-  "main": "./src/background.js",
+  "main": "./dist_electron/bundled/background.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "electron-updater": "^4.3.1",
@@ -51,5 +51,14 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomasz-tomczyk/arcfire.git"
+  },
+  "publish": [
+    {
+      "provider": "github"
+    }
   ]
 }
